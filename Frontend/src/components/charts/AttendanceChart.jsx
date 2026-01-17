@@ -10,18 +10,24 @@ ChartJS.register(BarElement, CategoryScale, LinearScale);
 
 export default function AttendanceChart({ student }) {
   const data = {
-    labels: ["Attendance", "Average Score"],
+    labels: ["Math", "Reading", "Writing", "Average"],
     datasets: [
       {
-        data: [student.attendance, student.score],
-        backgroundColor: ["#6366f1", "#22c55e"]
+        label: "Scores",
+        data: [
+          student.math_score,
+          student.reading_score,
+          student.writing_score,
+          student.average_score
+        ],
+        backgroundColor: "#6366f1"
       }
     ]
   };
 
   return (
     <div className="bg-white p-4 rounded-lg shadow">
-      <h3 className="text-center font-semibold mb-2">Attendance vs Performance</h3>
+      <h3 className="text-center font-semibold mb-2">Academic Performance</h3>
       <Bar data={data} />
     </div>
   );

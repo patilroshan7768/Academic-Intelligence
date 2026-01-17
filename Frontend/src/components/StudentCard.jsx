@@ -4,11 +4,14 @@ export default function StudentCard({ student }) {
       <h3 className="text-xl font-semibold mb-4">Student Analysis</h3>
 
       <div className="grid grid-cols-2 gap-4">
-        <p><b>Name:</b> {student.name}</p>
-        <p><b>Category:</b> {student.category}</p>
-        <p><b>Needs Support:</b> {student.support}</p>
-        <p><b>Continuation:</b> {student.continuation}</p>
-        <p><b>Attendance Impact:</b> {student.attendanceImpact}</p>
+        <p><b>Student ID:</b> {student.student_id}</p>
+        <p><b>Average Score:</b> {student.average_score}</p>
+
+        <p><b>Performance Category:</b> {student.performance_category}</p>
+        <p><b>Risk Status:</b> {student.risk_status}</p>
+
+        <p><b>Overall Decision:</b> {student.overall_decision}</p>
+        <p><b>Needs Support:</b> {student.needs_support}</p>
       </div>
     </div>
   );
